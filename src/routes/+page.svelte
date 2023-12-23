@@ -1,4 +1,19 @@
 <script>
+	import { onMount } from "svelte";
+	import { getGasPricesByState } from "./services/gasPriceService";
+
+	let gasPrices = null;
+	let currentGasPricesCA = null;
+
+	// dummy price, to be deleted when ML model is implemented
+	$: predictedGasPricesCA = (currentGasPricesCA * 1.05).toFixed(3);;
+	// end dummy price
+
+	onMount(async () => {
+		gasPrices = await getGasPricesByState("CA");
+		currentGasPricesCA = gasPrices.state.gasoline;
+		console.log(currentGasPricesCA); // Display the fetched gas prices in the console
+	});
 </script>
 
 <svelte:head>
@@ -16,10 +31,21 @@
 
 <section1>
 	<section-column>
-		<h2>Current Gas Prices</h2>
+		<h2>Current Gas Prices in <u>CA</u></h2>
+		{#if currentGasPricesCA !== null}
+			<b>$ {currentGasPricesCA}</b>
+		{:else}
+			<p>Loading...</p>
+		{/if}
 	</section-column>
+
 	<section-column>
 		<h2>Predicted Price in <u>One Month</u></h2>
+		{#if currentGasPricesCA !== null}
+			<b>$ {predictedGasPricesCA}</b>
+		{:else}
+			<p>Loading...</p>
+		{/if}
 	</section-column>
 </section1>
 
@@ -29,8 +55,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 0.6;
-		background-color: aquamarine;
+		flex: 0.2;
+		/* background-color: aquamarine; */
 	}
 
 	section1 {
@@ -38,8 +64,8 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		flex: 0.6;
-		background-color: aquamarine;
+		flex: 0;
+		/* background-color: aquamarine; */
 		flex-wrap: wrap;
 	}
 
@@ -49,7 +75,7 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
-		background-color: bisque;
+		/* background-color: bisque; */
 	}
 
 	h1 {
