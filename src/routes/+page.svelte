@@ -31,7 +31,7 @@
 
 <section1>
 	<section-column>
-		<h2>Current Gas Prices in <u>CA</u></h2>
+		<h2>Current Avg. Gas Prices in <u>CA</u></h2>
 		{#if currentGasPricesCA !== null}
 			<b>$ {currentGasPricesCA}</b>
 		{:else}
@@ -40,9 +40,17 @@
 	</section-column>
 
 	<section-column>
-		<h2>Predicted Price in <u>One Month</u></h2>
+		<h2>Predicted Avg. Price in <u>One Month</u></h2>
 		{#if currentGasPricesCA !== null}
-			<b>$ {predictedGasPricesCA}</b>
+			<b>
+				$ {predictedGasPricesCA}
+				{#if predictedGasPricesCA > currentGasPricesCA}
+					<span class="up">▲</span>
+				{:else if predictedGasPricesCA < currentGasPricesCA}
+					<span class="down">▼</span>
+				{/if}
+
+			</b>
 		{:else}
 			<p>Loading...</p>
 		{/if}

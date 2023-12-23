@@ -7,5 +7,5 @@
 	<h1>Research</h1>
 
 	<p>
-		Research is in progress. Check back later!
+		Researchz is in progress. Check back later!
 </div>
