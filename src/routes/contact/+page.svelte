@@ -4,23 +4,20 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>Contact</h1>
+
+	<p>Hey I'm Eric Ly!</p>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+		During my winter break, I made this site to develop my skills in Svelte,
+		backend, and machine learning. For any collaboration, recruiting, or
+		just chats, feel free to contact me, by visiting the site below!
 	</p>
 
-	<pre>npm create svelte@latest</pre>
+	<pre><a href="https://www.lyyeric.tech/">www.lyyeric.tech/</a></pre>
 
 	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
+		(I was originally thinking of adding my contact info here, but that felt
+		a little repetitive when I already had that on my personal site 👻)
 	</p>
 </div>
