@@ -1,7 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
@@ -11,22 +8,20 @@
 
 <section>
 	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
+		<span class="welcome"> </span>
+		Petrol Prophesy
+		<h2>An app that predicts future gas prices</h2>
 	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
 </section>
+
+<section1>
+	<section-column>
+		<h2>Current Gas Prices</h2>
+	</section-column>
+	<section-column>
+		<h2>Predicted Price in <u>One Month</u></h2>
+	</section-column>
+</section1>
 
 <style>
 	section {
@@ -35,25 +30,29 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
+		background-color: aquamarine;
+	}
+
+	section1 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex: 0.6;
+		background-color: aquamarine;
+		flex-wrap: wrap;
+	}
+
+	section-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 0.6;
+		background-color: bisque;
 	}
 
 	h1 {
 		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>
