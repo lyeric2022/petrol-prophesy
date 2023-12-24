@@ -21,8 +21,8 @@ export function calculateSMA() {
 }
 
 export function calculateSMAPercentChange() {
-    const smaValues = calculateSMA();
-    const percentChange = ((prices[prices.length - 1] - smaValues) / smaValues);
+    const smaValue = calculateSMA();
+    const percentChange = ((prices[prices.length - 1] - smaValue) / smaValue);
     console.log(percentChange.toFixed(5));
     return percentChange.toFixed(5);
 }

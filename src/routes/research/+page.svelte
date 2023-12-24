@@ -29,5 +29,6 @@
 	.text-column {
 		margin-left: 5%;
 		margin-right: 5%;
+		max-width: 100vw;
 	}
 </style>
