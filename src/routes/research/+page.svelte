@@ -8,7 +8,7 @@
 
 	<h2><b>Blog 12.23.23</b></h2>
 	<p>
-		&emsp;&emsp;&emsp; Current calculations are currently done using the simple moving
+		Current calculations are currently done using the simple moving
 		averages (SMA) technique. Taking in the last 4 weeks of USA petrol
 		prices, the average is calculated and used as the predicted price for
 		the next week. Once a change coefficient is found, the coefficient is
@@ -16,7 +16,7 @@
 		expected future price.
 	</p>
 	<p>
-		&emsp;&emsp;&emsp; While it performs moderately well (statistics coming soon), this
+		While it performs moderately well (statistics coming soon), this
 		approach can react slowly to recent price changes due to its equal
 		weighting for all data points within the period. This might lag behind
 		in identifying current trends. Additionally, it only relies on past data
@@ -24,3 +24,9 @@
 		in the future.
 	</p>
 </div>
+
+<style>
+	.text-column {
+		margin: 5%;
+	}
+</style>

@@ -21,3 +21,9 @@
 		a little repetitive when I already had that on my personal site 👻)
 	</p>
 </div>
+
+<style>
+	.text-column {
+		margin: 5%;
+	}
+</style>
