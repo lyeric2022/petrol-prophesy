@@ -8,7 +8,7 @@
 
 	<p>
 		This is an application to visualize future petrol prices. 
-		This will be achieved by leveraging machine learning <a href="https://en.wikipedia.org/wiki/Neural_network">neural networks</a>, trained from historical data and events. 
+		Eventually, this will be achieved by leveraging machine learning <a href="https://en.wikipedia.org/wiki/Neural_network">neural networks</a>, trained from historical data and events. 
 		In essence: 
 	</p>
 
