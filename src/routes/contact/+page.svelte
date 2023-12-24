@@ -24,6 +24,7 @@
 
 <style>
 	.text-column {
-		margin: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 </style>
