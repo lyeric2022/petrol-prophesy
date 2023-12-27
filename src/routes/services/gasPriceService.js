@@ -1,7 +1,7 @@
 // gasPricesService.js
 
 export async function getGasPricesByState(stateCode) {
-    const apiKey = 'apikey 4dOwa9V8kHBOYwohrDExqY:3R8HofwC8bTJW8ZYWNHdPl';
+    const apiKey = 'apikey 60gogCUI8oX6bS0xplFfKk:7cjzx5zYj4NRIWbkpSEHcA';
     const url = `https://api.collectapi.com/gasPrice/stateUsaPrice?state=${stateCode}`;
   
     try {
